@@ -1,0 +1,110 @@
+{
+  "resource": "Quartup\\Filegun\\Models\\Contact",
+  "model": {
+    "user_id": null,
+    "name": null,
+    "email": null,
+    "phone": null
+  },
+  "validation": {
+    "user_id": [
+      "required"
+    ],
+    "name": [
+      "required"
+    ],
+    "email": [
+      "required",
+      "email"
+    ],
+    "phone": [
+      "nullable",
+      "numeric",
+      "between:34600000000,3479999999999"
+    ]
+  },
+  "appBar": false,
+  "table": {
+    "title": "contactos",
+    "simpleSearch": true,
+    "searchBy": [
+      "name",
+      "email"
+    ],
+    "permanent": {
+      "user_id": "store-state-user-user_id"
+    },
+    "aggregation": [
+      {
+        "project": {
+          "name": 1,
+          "email": 1,
+          "phone": 1
+        }
+      }
+    ],
+    "headers": [
+      {
+        "text": "name",
+        "value": "name",
+        "sortable": true
+      },
+      {
+        "text": "email",
+        "value": "email",
+        "sortable": true
+      },
+      {
+        "text": "phone",
+        "value": "phone",
+        "sortable": true
+      },
+      {
+        "text": "",
+        "value": "actions",
+        "sortable": false
+      }
+    ]
+  },
+  "formAdd": {
+    "user_id": "store-state-user-user_id"
+  },
+  "form": [
+    {
+      "component": "input",
+      "props": {
+        "key": "name",
+        "label": "name",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input",
+      "props": {
+        "key": "email",
+        "label": "email",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input-phone",
+      "props": {
+        "key": "phone",
+        "label": "phone",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    }
+  ]
+}

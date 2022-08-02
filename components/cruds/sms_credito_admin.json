@@ -1,0 +1,147 @@
+{
+  "resource": "Quartup\\Filegun\\Models\\SmsCredit",
+  "model": {
+    "user_id": null,
+    "by_subscription": null,
+    "by_purchase": null
+  },
+  "validation": {
+    "user_id": [
+      "required"
+    ],
+    "by_subscription": [
+      "required",
+      "numeric"
+    ],
+    "by_purchase": [
+      "required",
+      "numeric"
+    ]
+  },
+  "appBar": false,
+  "table": {
+    "title": "SmsCredits",
+    "simpleSearch": true,
+    "searchBy": [
+      "user.name",
+      "description"
+    ],
+    "aggregation": [
+      {
+        "addFields": {
+          "userId": {
+            "$toObjectId": "$user_id"
+          }
+        }
+      },
+      {
+        "lookup": {
+          "localField": "userId",
+          "from": "users",
+          "foreignField": "_id",
+          "as": "users"
+        }
+      },
+      {
+        "set": {
+          "user": {
+            "$first": "$users"
+          }
+        }
+      },
+      {
+        "unset": [
+          "users"
+        ]
+      },
+      {
+        "project": {
+          "user_id": 1,
+          "user.name": 1,
+          "by_subscription": 1,
+          "by_purchase": 1
+        }
+      }
+    ],
+    "headers": [
+      {
+        "text": "Nombre",
+        "value": "user.name",
+        "sortable": true
+      },
+      {
+        "text": "SmsSubs",
+        "value": "by_subscription",
+        "sortable": false
+      },
+      {
+        "text": "SmsCompra",
+        "value": "by_purchase",
+        "sortable": false
+      },
+      {
+        "text": "",
+        "value": "actions",
+        "sortable": false
+      }
+    ]
+  },
+  "form": [
+    {
+      "component": "input",
+      "props": {
+        "type": "number",
+        "key": "by_subscription",
+        "label": "SmsSub",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input",
+      "props": {
+        "type": "number",
+        "key": "by_purchase",
+        "label": "SmsCompra",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "json-autocomplete",
+      "props": {
+        "key": "user_id",
+        "json": {
+          "label": "Usuario",
+          "resource": "Quartup\\Filegun\\Models\\UserExt",
+          "searchBy": [
+            "name"
+          ],
+          "itemText": [
+            "name"
+          ],
+          "multiple": false,
+          "itemKey": "_id",
+          "aggregation": [
+            {
+              "project": {
+                "name": 1
+              }
+            }
+          ]
+        },
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    }
+  ]
+}

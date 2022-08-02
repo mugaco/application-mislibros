@@ -1,0 +1,148 @@
+{
+  "planes": {
+    "base": {
+      "keys": {
+        "c1": true,
+        "c2": true,
+        "c4": true,
+        "c5": true,
+        "c6": true,
+        "c7": false,
+        "c8": false,
+        "c9": false,
+        "c10": false,
+        "c11": false,
+        "c3": false
+      },
+      "destacado": false,
+      "nombre": {
+        "es": "Base",
+        "ca": "Base",
+        "en": "Base"
+      },
+      "price": {
+        "name": "base",
+        "base_imponible": 0,
+        "interval": "day"
+      },
+      "price_name": "base"
+    },
+    "profesional": {
+      "keys": {
+        "c1": true,
+        "c2": true,
+        "c4": true,
+        "c5": true,
+        "c6": true,
+        "c7": true,
+        "c8": true,
+        "c9": true,
+        "c10": true,
+        "c11": true,
+        "c3": true
+      },
+      "destacado": true,
+      "nombre": {
+        "es": "Profesional",
+        "ca": "Professional",
+        "en": "Professional"
+      },
+      "price_name": "profesional",
+      "price": {
+        "name": "profesional",
+        "base_imponible": 990,
+        "interval": "day"
+      }
+    }
+  },
+  "caracteristicas": [
+    {
+      "key": "c1",
+      "text": {
+        "en": "End-to-end encryption",
+        "es": "Cifrado de extremo a extremo",
+        "ca": "Xifrat d'extrem a extrem"
+      }
+    },
+    {
+      "key": "c2",
+      "text": {
+        "en": "Download with expiration date",
+        "es": "Descarga con fecha de caducidad",
+        "ca": "Descàrrega amb data de caducitat"
+      }
+    },
+    {
+      "key": "c3",
+      "text": {
+        "en": "multiple documents",
+        "es": "Múltiples documentos",
+        "ca": "Múltiples documents"
+      }
+    },
+    {
+      "key": "c4",
+      "text": {
+        "en": "Delivery and download notification",
+        "es": "Notificación de entrega y descarga",
+        "ca": "Notificació d'entrega i descàrrega"
+      }
+    },
+    {
+      "key": "c5",
+      "text": {
+        "en": "Simplified submission form",
+        "es": "Formulario de envio simplificado",
+        "ca": "Formulari d'enviament simplificat"
+      }
+    },
+    {
+      "key": "c6",
+      "text": {
+        "en": "PIN download protection",
+        "es": "Protección de descarga con PIN",
+        "ca": "Protecció de descàrrega amb PIN"
+      }
+    },
+    {
+      "key": "c7",
+      "text": {
+        "en": "Pack 25 SMS to send PIN",
+        "es": "Pack 25 SMS para envío de PIN",
+        "ca": "Pack 25 SMS per a enviament de PIN"
+      }
+    },
+    {
+      "key": "c8",
+      "text": {
+        "en": "Hash code for document certification",
+        "es": "Código hash para certificación de documentos",
+        "ca": "Codi hash per a la certificació de documents"
+      }
+    },
+    {
+      "key": "c9",
+      "text": {
+        "en": "Contact management",
+        "es": "Gestión de contactos",
+        "ca": "Gestió de contactes"
+      }
+    },
+    {
+      "key": "c10",
+      "text": {
+        "en": "Historical control of sendings",
+        "es": "Control histórico de envíos",
+        "ca": "Control històric d'enviaments"
+      }
+    },
+    {
+      "key": "c11",
+      "text": {
+        "en": "Send to multiple contacts simultaneously",
+        "es": "Envío a multiples contactos simultaniamente",
+        "ca": "Enviament a multiples contactes simultaniament"
+      }
+    }
+  ]
+}

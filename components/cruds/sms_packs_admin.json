@@ -1,0 +1,205 @@
+{
+  "resource": "Quartup\\Filegun\\Models\\SmsPack",
+  "model": {
+    "user_id": null,
+    "name": null,
+    "description": null,
+    "amount": null,
+    "sms": null,
+    "images": null,
+    "iva_producto_grupo_id": null
+  },
+  "validation": {
+    "user_id": [
+      "required"
+    ],
+    "iva_producto_grupo_id": [
+      "required"
+    ],
+    "name": [
+      "required"
+    ],
+    "description": [
+      "required"
+    ],
+    "amount": [
+      "required",
+      "numeric"
+    ],
+    "sms": [
+      "required",
+      "numeric"
+    ]
+  },
+  "appBar": false,
+  "table": {
+    "title": "SmsPacks",
+    "simpleSearch": true,
+    "searchBy": [
+      "name",
+      "description"
+    ],
+    "aggregation": [
+      {
+        "addFields": {
+          "ivaProductoGrupoId": {
+            "$toObjectId": "$iva_producto_grupo_id"
+          }
+        }
+      },
+      {
+        "lookup": {
+          "localField": "ivaProductoGrupoId",
+          "from": "iva_producto_grupos",
+          "foreignField": "_id",
+          "as": "iva_producto_grupos"
+        }
+      },
+      {
+        "set": {
+          "producto": {
+            "$first": "$iva_producto_grupos"
+          }
+        }
+      },
+      {
+        "project": {
+          "name": 1,
+          "description": 1,
+          "amount": 1,
+          "sms": 1,
+          "images": 1,
+          "iva_producto_grupo_id": 1,
+          "producto.name": 1
+        }
+      }
+    ],
+    "headers": [
+      {
+        "text": "Nombre",
+        "value": "name",
+        "sortable": true,
+        "type": "locales"
+      },
+      {
+        "text": "Descripción",
+        "value": "description",
+        "sortable": true,
+        "type": "locales"
+      },
+      {
+        "text": "Cantidad",
+        "value": "amount",
+        "type": "moneda",
+        "sortable": true
+      },
+      {
+        "text": "Sms",
+        "value": "sms",
+        "sortable": true
+      },
+      {
+        "text": "iva producto",
+        "value": "producto.name",
+        "sortable": true
+      },
+      {
+        "text": "Img",
+        "value": "images",
+        "type": "array-files",
+        "sortable": true
+      },
+      {
+        "text": "",
+        "value": "actions",
+        "sortable": false
+      }
+    ]
+  },
+  "formAdd": {
+    "user_id": "store-state-user-user_id"
+  },
+  "form": [
+    {
+      "component": "input-locales",
+      "props": {
+        "key": "name",
+        "label": "Nombre"
+      }
+    },
+    {
+      "component": "input-locales-html",
+      "props": {
+        "key": "description",
+        "label": "Descripcion"
+      }
+    },
+    {
+      "component": "input",
+      "props": {
+        "type": "number",
+        "key": "amount",
+        "label": "Céntimos",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input",
+      "props": {
+        "type": "number",
+        "key": "sms",
+        "label": "Sms",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "json-autocomplete",
+      "props": {
+        "key": "iva_producto_grupo_id",
+        "json": {
+          "label": "Iva producto",
+          "resource": "Mugaco\\MarketPlace\\Models\\Iva\\IvaProductoGrupo",
+          "searchBy": [
+            "name"
+          ],
+          "itemText": [
+            "name"
+          ],
+          "multiple": false,
+          "itemKey": "_id",
+          "aggregation": [
+            {
+              "project": {
+                "name": 1
+              }
+            }
+          ]
+        },
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input-files",
+      "props": {
+        "key": "images",
+        "type": "images",
+        "storage": {
+          "location": "local",
+          "location-name": "/imagenes-producto/{$id_folder}"
+        }
+      }
+    }
+  ]
+}

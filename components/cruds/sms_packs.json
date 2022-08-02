@@ -1,0 +1,90 @@
+{
+  "resource": "Quartup\\Filegun\\Models\\SmsPack",
+  "cardItemView": {
+    "when": "allways",
+    "view": "@/components/sms-packs/card-item-view.vue",
+    "sort": false,
+    "pagination": false,
+    "top": false,
+    "iva": false
+  },
+  "model": {
+    "user_id": null,
+    "name": null,
+    "description": null,
+    "sms": null,
+    "images": null,
+    "amount": null
+  },
+  "validation": {
+    "user_id": [
+      "required"
+    ],
+    "name": [
+      "required"
+    ],
+    "description": [
+      "required"
+    ],
+    "amount": [
+      "required",
+      "numeric"
+    ]
+  },
+  "appBar": false,
+  "table": {
+    "title": "smsPacks",
+    "simpleSearch": true,
+    "searchBy": [
+      "name",
+      "description"
+    ],
+    "aggregation": [
+      {
+        "project": {
+          "name": 1,
+          "description": 1,
+          "amount": 1,
+          "images": 1,
+          "sms": 1
+        }
+      }
+    ],
+    "headers": [
+      {
+        "text": "name",
+        "value": "name",
+        "sortable": true,
+        "type": "lang",
+        "store": "store-state-user-lang"
+      },
+      {
+        "text": "descripcion",
+        "value": "description",
+        "sortable": true,
+        "type": "lang",
+        "store": "store-state-user-lang"
+      },
+      {
+        "text": "centimos",
+        "value": "amount",
+        "sortable": true
+      },
+      {
+        "text": "images",
+        "value": "images",
+        "sortable": false
+      },
+      {
+        "text": "sms",
+        "value": "sms",
+        "sortable": false
+      },
+      {
+        "text": "",
+        "value": "actions",
+        "sortable": false
+      }
+    ]
+  }
+}
