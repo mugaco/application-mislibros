@@ -1,6 +1,6 @@
 <template>
   <v-container class="all" :class="{ 'fade-in-mounted': ver }" fluid>
-    <FileDrawer />
+   
     <v-row
       justify="center"
       :align="$vuetify.breakpoint.xs ? 'start' : 'center'"
@@ -21,19 +21,19 @@
             <img
               class="bg-imagen bg-iconos"
               :src="
-                require('&/theme/assets-filegun/imagenes/mobil-filegun-negre1.png')
+                require('&/theme/assets/imagenes/mobil-filegun-negre1.png')
               "
             />
             <img
               class="bg-imagen bg-fondo"
               :src="
-                require('&/theme/assets-filegun/imagenes/mobil-filegun-negre3.png')
+                require('&/theme/assets/imagenes/mobil-filegun-negre3.png')
               "
             />
             <img
               class="bg-imagen bg-mobil"
               :src="
-                require('&/theme/assets-filegun/imagenes/mobil-filegun-negre2.png')
+                require('&/theme/assets/imagenes/mobil-filegun-negre2.png')
               "
             />
           </div>
@@ -73,8 +73,7 @@
 </template>
 
 <script>
-import FileLoader from "@/components/upload-files/loader";
-import FileDrawer from "@/components/upload-files/drawer.vue";
+
 
 export default {
   name: "ContentBanner",
@@ -84,8 +83,7 @@ export default {
     });
   },
   components: {
-    FileLoader,
-    FileDrawer,
+
   },
   data: () => ({
     ver: false,

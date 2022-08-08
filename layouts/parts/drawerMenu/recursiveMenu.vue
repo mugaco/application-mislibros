@@ -103,8 +103,8 @@ export default {
           {
             color: "white",
             icon: "receipt",
-            title: this.$t("menu-admin-tickets"),
-            to: this.localePath("/admin/super-admin/mp/tickets"),
+            title: this.$t("books"),
+            to: this.localePath("/admin/panel/books_admin"),
           },
           {
             color: "white",
@@ -153,9 +153,10 @@ export default {
             },
             {
               color: "white",
-              title: "Inspire CM",
-              to: this.localePath("/inspires/inspire-cm"),
+              title: "Inspire",
+              to: this.localePath("/inspires/inspire"),
             },
+            
           ],
         });
       }

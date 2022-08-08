@@ -1,7 +1,6 @@
 <template>
   <div>
-    <MainBanner class="baner-100" />
-  <!-- <nuxt-link to="/inspire-subscription">Inspire (estoy en pages index)</nuxt-link> -->
+    <!-- <MainBanner class="baner-100" />
     <Claim2 />
     <MultiFactor />
     <Claim1 />
@@ -10,24 +9,24 @@
     <Api />
     <Widget />
     <Planes :planes="planes" />
-    <Contacto />
+    <Contacto /> -->
   </div>
 </template>
 <script>
 export default {
   name: "Home",
   components: {
-    MainBanner: () => import("@/components/mainBanner"),
-    Claim1: () => import("@/components/home_sections/claim1"),
-    Claim2: () => import("@/components/home_sections/claim2"),
-    MultiFactor: () => import("@/components/home_sections/multiFactor"),
-    Beneficios: () => import("@/components/home_sections/Beneficios"),
-    Funcionalidad: () => import("@/components/home_sections/Funcionalidad"),
-    Api: () => import("@/components/home_sections/api"),
-    Widget: () => import("@/components/home_sections/widget"),
-    // Planes: () => import("@/components/home_sections/Planes"),
-    Planes: () => import("&/common/market-place/planes"),
-    Contacto: () => import("@/components/home_sections/Contact"),
+    // MainBanner: () => import("@/components/mainBanner"),
+    // Claim1: () => import("@/components/home_sections/claim1"),
+    // Claim2: () => import("@/components/home_sections/claim2"),
+    // MultiFactor: () => import("@/components/home_sections/multiFactor"),
+    // Beneficios: () => import("@/components/home_sections/Beneficios"),
+    // Funcionalidad: () => import("@/components/home_sections/Funcionalidad"),
+    // Api: () => import("@/components/home_sections/api"),
+    // Widget: () => import("@/components/home_sections/widget"),
+    // // Planes: () => import("@/components/home_sections/Planes"),
+    // Planes: () => import("&/common/market-place/planes"),
+    // Contacto: () => import("@/components/home_sections/Contact"),
   },
   data() {
     return { planes: null };

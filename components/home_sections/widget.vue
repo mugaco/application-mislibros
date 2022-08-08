@@ -46,8 +46,8 @@ export default {
 .bg-widget {
   background-color: #b7c0cb;
   @media (min-width:600px){
-    background-image: url("&/theme/assets-filegun/imagenes/f1.png");
-    // background-image: url("&/theme/assets-filegun/imagenes/f2.png");
+    background-image: url("&/theme/assets/imagenes/f1.png");
+    // background-image: url("&/theme/assets/imagenes/f2.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 100%;

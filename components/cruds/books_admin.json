@@ -1,0 +1,98 @@
+{
+  "resource": "Mugaco\\Book\\Models\\Book",
+  "cardItemView": {
+    "when": "allways",
+    "view": "@/components/books-admin/book-admin-item-view.vue",
+    "sort": true,
+    "pagination": true,
+    "top": true,
+    "iva": false
+  },
+  "model": {
+    "user_id": null,
+    "title": null,
+    "author": null
+  },
+  "validation": {
+    "user_id": [
+      "required"
+    ],
+    "title": [
+      "required"
+    ],
+    "author": [
+      "required"
+    ]
+  },
+  "appBar": false,
+  "table": {
+    "title": "Pepes",
+    "simpleSearch": true,
+    "searchBy": [
+      "title",
+      "author"
+    ],
+    "aggregation": [
+      
+      {
+        "project": {
+          "title": 1,
+          "author": 1
+        }
+      }
+    ],
+    "headers": [
+      {
+        "text": "autor",
+        "value": "author",
+        "sortable": true
+    
+      },
+      {
+        "text": "title",
+        "value": "title",
+        "sortable": true
+        
+      },
+     
+      {
+        "text": "",
+        "value": "actions",
+        "sortable": false
+      }
+    ]
+  },
+  "formAdd": {
+    "user_id": "store-state-user-user_id"
+  },
+  "form": [
+
+
+    {
+      "component": "input",
+      "props": {
+       
+        "key": "author",
+        "label": "author",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input",
+      "props": {
+      
+        "key": "title",
+        "label": "title",
+        "cols": {
+          "cols": 12,
+          "md": 6,
+          "sm": 3
+        }
+      }
+    }
+  ]
+}

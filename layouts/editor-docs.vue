@@ -15,20 +15,15 @@
       ></v-progress-circular>
     </v-overlay>
 
-    <Header :height="$vuetify.breakpoint.xs ? 70 : 85" color="header"> </Header>
+    <!-- <Header :height="$vuetify.breakpoint.xs ? 70 : 85" color="header" /> -->
 
-    <!-- <v-main class="template-admin-main" :style="`margin-left:${marginLeft}`"> -->
-    <v-main >
-      <!-- <pre>{{ { id: $store.state.cms.publicationIdMounted } }}</pre> -->
-      <!-- <pre>{{ $vuetify.breakpoint.mobile }}</pre> -->
+    <v-main class="template-default-main">
       <nuxt />
     </v-main>
-    <!-- <Footer /> -->
-    <DrawerMenu />
+    <Footer />
+    <DrawerAccess />
     <Galletas />
-
     <!-- <CmsInLayout /> -->
-
     <v-fab-transition>
       <v-btn
         color="primary"
@@ -36,8 +31,10 @@
         v-show="fabButton"
         fixed
         fab
-        bottom
+        style="bottom: 40px; opacity: 0.7"
+        :style="$vuetify.breakpoint.xs ? 'bottom:100px' : ''"
         right
+        to="#"
         @click="toTop"
       >
         <v-icon>keyboard_arrow_up</v-icon>
@@ -47,18 +44,21 @@
 </template>
 
 <script>
+// import CmsInLayout from "&/common/cms/admin/CmsInLayout";
 import socket from "./socket-mixin.js";
 import storeFiles from "./storeFiles-mixin.js";
 
 export default {
   mixins: [socket, storeFiles],
-  name: "layaut-admin",
+
   components: {
-    Galletas: () => import("@/layouts/parts/aviso-cookies"),
-    Header: () => import("@/layouts/parts/header/admin"),
-    // Footer: () => import("@/layouts/parts/Footer"),
-    DrawerMenu: () => import("./parts/drawerMenu"),
     // CmsInLayout,
+    Galletas: () => import("@/layouts/parts/aviso-cookies"),
+
+    Header: () => import("@/layouts/parts/header/default"),
+    Footer: () => import("@/layouts/parts/Footer"),
+
+    DrawerAccess: () => import("@/layouts/parts/drawerAccess/drawer"),
   },
   data: () => ({
     overlay: true,
@@ -67,7 +67,6 @@ export default {
   mounted() {
     this.overlay = false;
   },
-
   methods: {
     onScroll(e) {
       if (typeof window === "undefined") return;
@@ -80,18 +79,7 @@ export default {
       this.$vuetify.goTo(0);
     },
   },
-  computed: {
-    marginLeft() {
-      if (!this.$vuetify.breakpoint.mobile) {
-        if (this.$store.state.mod.drawerMenu) {
-          return "250px";
-        }
-      }
-      return "0px";
-    },
-  },
 };
 </script>
 
-<style style>
-</style>
+<style></style>

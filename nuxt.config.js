@@ -1,5 +1,5 @@
 const path = require('path')
-const theme = "filegun"
+const theme = "clave-mi"
 
 import {
   apiUrl,
@@ -176,6 +176,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // ['@nuxtjs/google-analytics', {
+    //   id: 'UA-12301-2'
+    // }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -302,7 +305,7 @@ export default {
       config.resolve.alias['&/common'] = path.resolve(__dirname, "../../common-js/vue-vuetify-components-no-autodiscover")
       config.resolve.alias['&/plugins'] = path.resolve(__dirname, "../../common-js/nuxt-plugins")
       config.resolve.alias['&/locales'] = path.resolve(__dirname, "../../common-js/locales")
-      config.resolve.alias['&/theme'] = path.resolve(__dirname, "../../common-js/themes-vuetify-2/filegun")
+      config.resolve.alias['&/theme'] = path.resolve(__dirname, "../../common-js/themes-vuetify-2/"+theme)
 
     }
   }

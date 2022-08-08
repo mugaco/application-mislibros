@@ -2,8 +2,8 @@
   <div class="logo" :class="{'icon': icon}" @click="$vuetify.goTo(0)">
     <NLink :to="localePath('/')" >
       <v-img
-        :src="require(`&/theme/assets-filegun/Logo/svg/${name}`)"
-        alt="logo filegun"
+        :src="require(`&/theme/assets/Logo/svg/${name}`)"
+        alt="logo"
       />
     </NLink>
   </div>

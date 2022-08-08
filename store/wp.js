@@ -1,6 +1,6 @@
 export const state = () => ({
-  color: "#f4f4f4",
-  wght: 600,
+  color: "#000",
+  wght: 200,
   factorWght: 2.5,
   fontSize: 1.6,
   indent: 7,

@@ -42,14 +42,14 @@ export default {
 .bg-claim2 {
   background-color: rgb(221, 221, 221);
   @media (min-width: 600px) {
-    background-image: url("&/theme/assets-filegun/imagenes/filegunClaim1.jpg");
-    // background-image: url("&/theme/assets-filegun/imagenes/f1.png");
+    background-image: url("&/theme/assets/imagenes/filegunClaim1.jpg");
+    // background-image: url("&/theme/assets/imagenes/f1.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 60% auto;
     // background-size: cover;
   }
 
-  /* background: black url('&/theme/assets-filegun/imagenes/filegun-b3.png') cover right top; */
+  /* background: black url('&/theme/assets/imagenes/filegun-b3.png') cover right top; */
 }
 </style>
