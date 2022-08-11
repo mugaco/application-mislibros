@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        name: 'FilegunDevJmm',
+        name: 'DevJmm',
         exec_mode: 'cluster',
         instances: 2, // Or a number of instances
         autorestart:true,

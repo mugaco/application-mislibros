@@ -129,12 +129,12 @@ export default {
     `../../common-js/themes-vuetify-2/${theme}/scss/style.scss`,
 
     //  "~/assets/filegun/scss/style.scss",
-    'codemirror/lib/codemirror.css',
-    // merge css
-    'codemirror/addon/merge/merge.css',
-    // theme css
-    'codemirror/theme/base16-dark.css',
-    'codemirror/theme/lesser-dark.css'
+    // 'codemirror/lib/codemirror.css',
+    // // merge css
+    // 'codemirror/addon/merge/merge.css',
+    // // theme css
+    // 'codemirror/theme/base16-dark.css',
+    // 'codemirror/theme/lesser-dark.css'
   ],
 
   // Customize the progress-bar color
@@ -159,7 +159,7 @@ export default {
     // '~/plugins/axios-40x.js',
     '~/plugins/i18n.js',
     '~/plugins/tt.js',
-    '../../common-js/nuxt-plugins/codemirror.client.js',
+    // '../../common-js/nuxt-plugins/codemirror.client.js',
     '../../common-js/nuxt-plugins/subscriptorCan.js',
     '../../common-js/nuxt-plugins/cart.js',
   ],

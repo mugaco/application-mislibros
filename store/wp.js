@@ -4,19 +4,28 @@ export const state = () => ({
   factorWght: 2.5,
   fontSize: 1.6,
   indent: 7,
+  justify:"left",
   firstMarginTop: 150,
   dobleMarginTop: 50,
   marginTop: 0,
   lineHeight: 1.6,
 
-   fontFamilyRegular: "Crimson Pro Regular",
-   fontFamilyItalic: "Crimson Pro Italic",
+  fontFamilyRegular: "Crimson Pro Regular",
+  fontFamilyItalic: "Crimson Pro Italic",
+
+  showControl: false
 
   //fontFamilyRegular: "Ibarra Real Nova Regular",
   //fontFamilyItalic: "Ibarra Real Nova Italic",
 });
 
 export const mutations = {
+  setJustify(state, val) {
+    state.justify = val;
+  },
+  setShowControl(state, val) {
+    state.showControl = val;
+  },
   setColor(state, val) {
     state.color = val;
   },

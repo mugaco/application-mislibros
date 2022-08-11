@@ -2,6 +2,10 @@ import les from '&/locales/es/locales.json'
 import lca from '&/locales/ca/locales.json'
 import len from '&/locales/en/locales.json'
 
+import lles from '@/locales/es/locales.json'
+import llca from '@/locales/ca/locales.json'
+import llen from '@/locales/en/locales.json'
+
 export default async ({ app, store }) => {
   const services = ['quartup.filegun', 'mugaco.market-place', 'mugaco.pass-mongo-2'];
   store.commit("translate/setServices", services);
@@ -17,6 +21,10 @@ export default async ({ app, store }) => {
   messages.ca.locales = lca;
   messages.en.locales = len;
 
+  messages.es.llocales = lles;
+  messages.ca.llocales = llca;
+  messages.en.llocales = llen;
+
   app.$axios.setHeader(
     "Request-lang",
     app.i18n.locale
@@ -28,6 +36,7 @@ export default async ({ app, store }) => {
       ...messages[lang]['market-place'],
       ...messages[lang]['pass-mongo-2'],
       ...messages[lang]['locales'],
+      ...messages[lang]['llocales'],
 
     });
   });
