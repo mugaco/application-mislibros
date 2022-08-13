@@ -1,12 +1,12 @@
 <template>
   <v-navigation-drawer
+    color="#000000"
     dark
     v-model="drawer"
     app
     temporary
     :width="500"
-    :src="$store.state.book.book_portrait"
-    class="book-app-portada"
+    class="book-app-contraportada"
   >
     <template slot="prepend">
       <!-- <pre>{{ {pep: $store.state.book.book_portrait } }}</pre> -->
@@ -15,7 +15,7 @@
     <template slot="append">
       <Append />
     </template>
-    <Menu en="portada" />
+    <Menu en="contraportada" />
   </v-navigation-drawer>
 </template>
 <script>
@@ -32,10 +32,10 @@ export default {
   computed: {
     drawer: {
       get() {
-        return this.$store.state.book.mostrar_portada;
+        return this.$store.state.book.mostrar_contraportada;
       },
       set(val) {
-        this.$store.commit("book/setMostrar_portada", val);
+        this.$store.commit("book/setMostrar_contraportada", val);
       },
     },
   },

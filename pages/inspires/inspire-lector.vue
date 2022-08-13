@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Contraportada />
     <Portada />
 
     <!-- <pre>{{ { o: $store.state.book } }}</pre> -->
@@ -12,11 +13,13 @@ import parseMd from "&/utils/parseMd.js";
 
 import Reader from "&/common/stuff/reader";
 import Portada from "@/components/libro-app/portada";
+import Contraportada from "@/components/libro-app/contra";
 export default {
   layout: "lector",
   components: {
     Reader,
     Portada,
+    Contraportada,
   },
   data: () => ({ md: null }),
   mounted() {

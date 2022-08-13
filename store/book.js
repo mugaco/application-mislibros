@@ -13,10 +13,14 @@ export const state = () => ({
 
   book_store_id: null, //??
   settings: null,
-  mostrar_portada: true
+  mostrar_portada: true,
+  mostrar_contraportada: false
 });
 
 export const mutations = {
+  setMostrar_contraportada(state, val) {
+    state.mostrar_contraportada = val
+  },
   setMostrar_portada(state, val) {
     state.mostrar_portada = val
   },

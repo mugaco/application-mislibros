@@ -13,6 +13,8 @@ export const state = () => ({
   is_admin: false,
   pm_last_four: null,
   fiscal_data: null,
+  delivery_address: null,
+  delivery_address_temp: null,
 });
 
 export const mutations = {
@@ -57,6 +59,12 @@ export const mutations = {
   },
   setFiscal_data(state, val) {
     state.fiscal_data = val
+  },
+  setDelivery_address(state, val) {
+    state.delivery_address = val
+  },
+  setDelivery_address_temp(state, val) {
+    state.delivery_address_temp = val
   },
 }
 

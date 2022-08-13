@@ -161,7 +161,11 @@ export default {
               title: "Lector",
               to: this.localePath("/inspires/inspire-lector"),
             },
-            
+                         {
+              color: "white",
+              title: "Tienda",
+              to: this.localePath("/inspires/inspire-tienda"),
+            },
           ],
         });
       }

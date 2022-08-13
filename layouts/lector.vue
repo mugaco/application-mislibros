@@ -18,6 +18,7 @@
     <!-- <Header :height="$vuetify.breakpoint.xs ? 70 : 85" color="header" /> -->
 
     <v-main class="template-default-main">
+      <!-- <pre>{{ $store.state.book }}</pre> -->
       <nuxt />
     </v-main>
     <!-- <Footer />
@@ -83,6 +84,17 @@ export default {
   }),
   mounted() {
     this.overlay = false;
+    // function killCopy(e) {
+    //   return false;
+    // }
+    // function reEnable() {
+    //   return true;
+    // }
+    document.onselectstart = new Function("return false");
+    // if (window.sidebar) {
+    //   document.onmousedown = killCopy;
+    //   document.onclick = reEnable;
+    // }
   },
   methods: {
     onScroll(e) {

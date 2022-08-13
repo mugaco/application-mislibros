@@ -1,21 +1,22 @@
 <template>
   <v-navigation-drawer
+    color="#6200ff"
     dark
     v-model="drawer"
     app
     temporary
     :width="500"
-    :src="$store.state.book.book_portrait"
-    class="book-app-portada"
+    right
   >
-    <template slot="prepend">
-      <!-- <pre>{{ {pep: $store.state.book.book_portrait } }}</pre> -->
-      <Prepend />
-    </template>
-    <template slot="append">
-      <Append />
-    </template>
-    <Menu en="portada" />
+    <div class="book-app-contraportada">
+      <div class="tit-aut">
+        <div class="tit">Barcino siglo III, independencia</div>
+        <div class="aut">Jose Manuel Nuñoz García</div>
+      </div>
+      <div><Prepend /></div>
+      <div><Menu en="contraportada"/></div>
+      <div><Append /></div>
+    </div>
   </v-navigation-drawer>
 </template>
 <script>
@@ -32,10 +33,10 @@ export default {
   computed: {
     drawer: {
       get() {
-        return this.$store.state.book.mostrar_portada;
+        return this.$store.state.book.mostrar_contraportada;
       },
       set(val) {
-        this.$store.commit("book/setMostrar_portada", val);
+        this.$store.commit("book/setMostrar_contraportada", val);
       },
     },
   },
