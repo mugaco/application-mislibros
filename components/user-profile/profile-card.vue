@@ -39,11 +39,11 @@
           ></p>
           <p class="user-email greyTint--text ma-0" v-text="user.email"></p>
 
-          <v-chip color="info" class="mr-2 mt-12 mb-4 mb-sm-0" x-large>
+          <!-- <v-chip color="info" class="mr-2 mt-12 mb-4 mb-sm-0" x-large>
             <span style="margin-left: 10px; margin-right: 10px">
               {{ nombrePlan }}
             </span>
-          </v-chip>
+          </v-chip> -->
         </v-col>
       </v-row>
     </v-card-text>

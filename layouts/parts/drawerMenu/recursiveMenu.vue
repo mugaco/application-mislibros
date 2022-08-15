@@ -9,11 +9,29 @@
   />
 </template>
 <script>
-import Recursive from "&/common/recursive-menu";
+import Recursive from "&/common/recursive-menu-2";
 export default {
   name: "drawer-menu",
   components: {
     Recursive,
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const itemActive = document.getElementsByClassName(
+        "xv-list-item--active"
+      );
+      if (itemActive.length > 0) {
+        const el =
+          itemActive[0].parentNode.parentNode.parentNode.parentNode.parentNode
+            .firstChild.firstChild;
+        console.log(el);
+        if (el.classList.contains("v-list-item--link-xxx")) {
+          setTimeout(()=>{
+             el.click();
+          },500)
+        }
+      }
+    });
   },
   computed: {
     items() {
@@ -74,15 +92,14 @@ export default {
             icon: "send",
             title: this.$t("menu-envios"),
             to: this.localePath("/admin/panel/envios"),
-          },
-
+          }
         );
 
         // ################    ADMINISTRADOR    ################
       }
       if (this.$store.state.user.is_admin) {
         items.push(
-                  {
+          {
             color: "white",
             icon: "inventory",
             title: this.$t("crear-suscripcion"),
@@ -115,7 +132,9 @@ export default {
               {
                 color: "white",
                 title: this.$t("menu-admin-iva-pro-grupo"),
-                to: this.localePath("/admin/super-admin/mp/iva_producto_grupos"),
+                to: this.localePath(
+                  "/admin/super-admin/mp/iva_producto_grupos"
+                ),
               },
               {
                 color: "white",
@@ -156,12 +175,12 @@ export default {
               title: "Inspire",
               to: this.localePath("/inspires/inspire"),
             },
-                  {
+            {
               color: "white",
               title: "Lector",
               to: this.localePath("/inspires/inspire-lector"),
             },
-                         {
+            {
               color: "white",
               title: "Tienda",
               to: this.localePath("/inspires/inspire-tienda"),

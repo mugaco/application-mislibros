@@ -8,7 +8,7 @@
         <v-col cols="12" class="pt-0">
           <Name editable />
           <Password editable />
-          <Info />
+          <!-- <Info />  es la suscripcion-->
         </v-col>
       </v-row>
     </v-card-text>
@@ -18,14 +18,14 @@
 <script>
 import Name from "&/common/pass-mongo-2/account/components/name";
 import Password from "&/common/pass-mongo-2/account/components/password";
-import Info from "&/common/market-place/planes/suscribir-plan/info-plan-and-cancel.vue";
+// import Info from "&/common/market-place/planes/suscribir-plan/info-plan-and-cancel.vue";
 
 export default {
   name: "profile-card",
   components: {
     Name,
     Password,
-    Info,
+    // Info,
   },
   data: () => ({
     mounted: false,
