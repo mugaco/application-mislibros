@@ -12,6 +12,12 @@
     "grosor":"Grossor",
     "tamano":"Tamany",
     "interlineado":"Interlineat",
-    "contraportada":"Contraportada"
+    "contraportada":"Contraportada",
+    "libreria":"Llibreria",
+    "idioma":"Idioma",
+    "formato":"Format",
+    "formato-libro":"Llibre tradicional en papel",
+    "formato-wlibro":"Llibre electrònic \"wlibro\""
+
 
 }

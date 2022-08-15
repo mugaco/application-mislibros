@@ -18,6 +18,7 @@
     <Header :height="$vuetify.breakpoint.xs? 70 : 85" color="header" />
   
     <v-main class="template-default-main">
+      
       <nuxt />
     </v-main>
     <Footer />

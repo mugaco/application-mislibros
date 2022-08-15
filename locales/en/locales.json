@@ -12,7 +12,13 @@
     "grosor":"Weight",
     "tamano":"Size",
     "interlineado":"Heightline",
-    "contraportada":"Back cover"
+    "contraportada":"Back cover",
+    "libreria":"Book store",
+    "idioma":"Lang",
+    "formato":"Format",
+    "formato-libro":"Paper book",
+    "formato-wlibro":"\"wlibro\" book"
+
 
 
 }

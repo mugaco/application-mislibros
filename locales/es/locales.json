@@ -12,5 +12,11 @@
     "grosor":"Grosor",
     "tamano":"Tamaño",
     "interlineado":"Interlineado",
-    "contraportada":"Contraportada"
+    "contraportada":"Contraportada",
+    "libreria":"Librería",
+    "idioma":"Idioma",
+    "formato":"Formato",
+    "formato-libro":"Libro tradicional en papel",
+    "formato-wlibro":"Libro electrónico \"wlibro\""
+
 }

@@ -12,20 +12,8 @@
 
       <v-spacer />
       <div>
-        <v-btn
-          :to="localePath('/#planes')"
-          plain
-          class="d-none d-md-inline-flex"
-        >
-          {{ $t("planes-titulo") }}
-        </v-btn>
-        <v-btn
-          :to="localePath('/#contacto')"
-          plain
-          class="d-none d-md-inline-flex"
-        >
-          {{ $t("contacta-titulo") }}
-        </v-btn>
+    
+    
 
         <Cart />
         <Langs />

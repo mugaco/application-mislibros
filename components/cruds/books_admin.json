@@ -1,7 +1,7 @@
 {
   "resource": "Mugaco\\Book\\Models\\Book",
   "cardItemView": {
-    "when": "allways",
+    "when":"never",
     "view": "@/components/books-admin/book-admin-item-view.vue",
     "sort": true,
     "pagination": true,
@@ -11,7 +11,8 @@
   "model": {
     "user_id": null,
     "title": null,
-    "author": null
+    "author": null,
+    "images":null
   },
   "validation": {
     "user_id": [
@@ -91,6 +92,17 @@
           "cols": 12,
           "md": 6,
           "sm": 3
+        }
+      }
+    },
+    {
+      "component": "input-files",
+      "props": {
+        "key": "images",
+        "type": "images",
+        "storage": {
+          "location": "local",
+          "location-name": "/imagenes-producto/{$id_folder}"
         }
       }
     }
