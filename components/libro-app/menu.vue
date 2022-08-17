@@ -36,7 +36,9 @@ export default {
         if (item.action == "leer") {
           this.$store.commit("book/setMostrar_portada", false);
           this.$store.commit("book/setMostrar_contraportada", false);
-
+        }
+        if (item.action == "comprar") {
+          this.$router.push('/inspires/inspire-tienda')
         }
         if (item.action == "contra") {
           this.$store.commit("book/setMostrar_portada", false);
@@ -61,6 +63,11 @@ export default {
           icon: "mdi-book-open",
           title: this.$t("leer"),
           action: "leer",
+        },
+        {
+          icon: "mdi-cart",
+          title: this.$t("comprar"),
+          action: "comprar",
         },
       ];
       if (this.en == "portada") {

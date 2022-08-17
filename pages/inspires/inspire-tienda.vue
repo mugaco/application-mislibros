@@ -42,6 +42,11 @@
                 {{ book_lang }}
               </v-chip>
             </div>
+            <div class="pl-15 libro-empezar-a-leer">
+              <v-btn to="/inspires/inspire-lector" color="primary" outlined>
+                {{ $t("empezar-a-leer") }}
+              </v-btn>
+            </div>
             <v-card-text class="pa-15 pt-9 fill-height">
               <v-row>
                 <v-col
@@ -52,7 +57,10 @@
                   <div>
                     <div>
                       <div class="formato">
-                      {{$t('formato')}}:  <v-chip class="ma-2" color="#f4f4f4">{{ setFormat(item.format) }}</v-chip>
+                        {{ $t("formato") }}:
+                        <v-chip class="ma-2" color="#f4f4f4">{{
+                          setFormat(item.format)
+                        }}</v-chip>
                       </div>
                       <Moneda
                         class="esta-moneda-class"

@@ -16,9 +16,12 @@
       <Append />
     </template>
     <Menu en="portada" />
+    <Social />
   </v-navigation-drawer>
 </template>
 <script>
+import Social from "@/components/social";
+
 import Prepend from "./prepend";
 import Append from "./append";
 import Menu from "../menu";
@@ -27,6 +30,7 @@ export default {
     Prepend,
     Append,
     Menu,
+    Social,
   },
   methods: {},
   computed: {

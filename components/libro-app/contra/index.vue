@@ -14,20 +14,25 @@
         <div class="aut">Jose Manuel Nuñoz García</div>
       </div>
       <div><Prepend /></div>
+      <Social />
       <div><Menu en="contraportada"/></div>
       <div><Append /></div>
     </div>
   </v-navigation-drawer>
 </template>
 <script>
+import Social from "@/components/social";
+
 import Prepend from "./prepend";
 import Append from "./append";
 import Menu from "../menu";
+
 export default {
   components: {
     Prepend,
     Append,
     Menu,
+    Social,
   },
   methods: {},
   computed: {
