@@ -42,7 +42,7 @@ export default {
   methods: {
     getMd() {
       this.$axios
-        .get(`book/md/${this.book_id}/${this.md_id}`)
+        .get(`wlibro/md/${this.book_id}/${this.md_id}`)
         .then((response) => {
           console.log(response);
           if (response.data.md) {

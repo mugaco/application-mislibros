@@ -35,7 +35,7 @@ export default {
  
     getMd() {
       this.$axios
-        .get(`book/md/${this.book_id}/${this.md_id}`)
+        .get(`wlibro/md/${this.book_id}/${this.md_id}`)
         .then((response) => {
           console.log(response);
           if (response.data.md) {
@@ -53,7 +53,7 @@ export default {
  
     create() {
       console.log("create");
-      this.$axios.post(`book/md/${this.book_id}`).then((response) => {
+      this.$axios.post(`wlibro/md/${this.book_id}`).then((response) => {
         this.$store.commit("book/setBook_id", response.data._id);
       });
     },
